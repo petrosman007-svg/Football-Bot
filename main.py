@@ -154,4 +154,5 @@ embed = {
 if thumbnail:
     embed["thumbnail"] = {"url": thumbnail}
 
-requests.post(WEBHOOK_URL, json={"embeds": [embed]})
+if fields:
+    requests.post(WEBHOOK_URL, json={"embeds": [embed]})
